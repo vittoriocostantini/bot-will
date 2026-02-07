@@ -39,7 +39,6 @@ export class ExcelService {
             if(row.getCell(targetCol).value === cleanID) break;
             targetCol++;
         }
-
         const cell = row.getCell(targetCol);
         cell.value = cleanID;
         const color = esDuplicado ? 'FFFFA500' : 'FF008000';

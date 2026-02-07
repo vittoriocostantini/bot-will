@@ -11,13 +11,13 @@ export async function handleDuplicateCase(page) {
 
     if (id) {
         console.log(`   ✅ ID Duplicado detectado: ${id}`);
-        return id; // Devolvemos el ID limpio (ej: Q12345-6)
+        // CAMBIO AQUÍ: Agregamos el prefijo "DUPLICADO:"
+        return 'DUPLICADO:' + id;
     } else {
         console.log(`   ❌ No se pudo extraer el ID de la pantalla de duplicado.`);
         return 'DUPLICADO_SIN_ID';
     }
 }
-
 async function extractIDFromDuplicatedPage(page) {
     // Selectores específicos de la caja de revisión de USAC
     const selectors = [
