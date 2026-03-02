@@ -70,7 +70,7 @@ async function start() {
         // Limpieza de sesión para el siguiente registro
         await page.context().clearCookies();
         console.log(chalk.gray(`⌛ Esperando 3 segundos...`));
-        await page.waitForTimeout(3000);
+        await page.waitForTimeout(4000);
     }
 
     console.log(chalk.cyan.bold("\n🏁 ¡PROCESO FINALIZADO!"));
